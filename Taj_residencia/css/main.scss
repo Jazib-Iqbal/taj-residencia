@@ -145,13 +145,28 @@ header{
         position: relative;
         
     }
-
     img{
         width: 100%;
-        // object-fit: cover;
-        // object-position: center;
         height: 100%;
     }
+
+    .image_gradient{
+        position: relative;
+        &:before{
+            content: '';
+            background-color: black;
+            opacity: .4;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        
+    }
+
+    
 
     .carousel-caption{
         // text-align: justify;
@@ -254,4 +269,50 @@ header{
 
   .projects{
       background-color: #262626;
+      
+
+    .project_inner{
+
+        h2{
+            position: relative;
+            text-transform: uppercase;
+            line-height: 1.5rem;
+            font-size: calc(.8rem + .8vw);
+            font-weight: bold;
+            color: white;
+            small{
+                font-size: small;
+                font-weight: normal;
+                color: $nav_font;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                height: 1px!important;
+                width: 18%;
+                top: 100%;
+                left: 0;
+                background-color: $yellow;
+            }
+        }
+
+        p{
+            color: $nav_font;
+            font-size: calc(.3rem + .4vw);
+            text-align: justify;
+
+            span{
+                color: white;
+                text-transform: uppercase;
+                // font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+
+        .pro_link{
+            display: flex;
+            gap: 1rem;
+            color: white;
+        }
+    }
   }
